@@ -1,0 +1,5 @@
+make it so that a table is created only when data is present
+
+make password reset modules
+
+add signup pages
