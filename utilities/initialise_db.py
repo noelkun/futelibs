@@ -6,10 +6,10 @@ def Connect():
     conn=None
     try:
         conn=mysql.connector.Connect(
-            host='localhost',
-            username='root',
-            password='root',
-            database=''
+            host='sql12.freesqldatabase.com',
+            username='sql12669532',
+            password='wlIArNGzxs',
+            database='sql12669532'
         )
 
 
@@ -27,9 +27,9 @@ def create_db():
     conn=None
 
     #creation
-    sql0="""DROP DATABASE IF EXISTS futelibs"""
-    sql1="""CREATE DATABASE futelibs"""
-    sql2="""USE futelibs"""
+    #sql0="""DROP DATABASE IF EXISTS futelibs"""
+    #sql1="""CREATE DATABASE futelibs"""
+    sql2="""USE sql12669532"""
     sql3="""create table admin(aid int primary key,name varchar(50),doj date,email varchar(50),pass varchar(20))"""
     sql4="""create table employee(eid int primary key,name varchar(50),doj date,email varchar(50),pass varchar(20))"""
     sql5="""create table members(mid int primary key,name varchar(50),doj date,email varchar(50),pass varchar(20))"""
@@ -66,8 +66,8 @@ def create_db():
         cursor=conn.cursor()
 
 
-        cursor.execute(sql0)
-        cursor.execute(sql1)
+        #cursor.execute(sql0)
+        #cursor.execute(sql1)
         cursor.execute(sql2)
         cursor.execute(sql3)
         cursor.execute(sql4)
@@ -93,7 +93,7 @@ def create_db():
         print('DATABASE INITIALISATION  FAILED')
 
     finally:
-        del conn,sql0,sql1,sql2,sql3,sql4,sql5,sql6,sql7,sql8,sql9,sql10,sql11,sql12,sql13,sql14,sql15,sql16
+        del conn,sql2,sql3,sql4,sql5,sql6,sql7,sql8,sql9,sql10,sql11,sql12,sql13,sql14,sql15,sql16
 
 
 
